@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDF7FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KAMU INI SIAPA?"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#FF1D1B20"
+                android:fontFamily="Space Grotesk" />
+
+            <TextView
+                android:id="@+id/tv_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="#FF1D1B20"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="1 / 2"
+                android:textColor="#FFFFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Isi sekali. Dipakai selamanya."
+            android:textSize="16sp"
+            android:textColor="#FF494551"
+            android:fontFamily="Space Grotesk" />
+
+        <!-- Role Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="ROLE UTAMAMU"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FF1D1B20"
+            android:fontFamily="Space Grotesk" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+
+            <!-- Developer -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:gravity="center"
+                android:text="DEVELOPER"
+                android:textColor="#FF1D1B20"
+                android:textStyle="bold"
+                android:fontFamily="Space Grotesk" />
+
+            <!-- Desainer -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_brutalist_selected"
+                android:gravity="center"
+                android:text="DESAINER"
+                android:textColor="#FF1D1B20"
+                android:textStyle="bold"
+                android:fontFamily="Space Grotesk" />
+
+            <!-- Writer -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:gravity="center"
+                android:text="WRITER"
+                android:textColor="#FF1D1B20"
+                android:textStyle="bold"
+                android:fontFamily="Space Grotesk" />
+
+            <!-- Marketer -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:gravity="center"
+                android:text="MARKETER"
+                android:textColor="#FF1D1B20"
+                android:textStyle="bold"
+                android:fontFamily="Space Grotesk" />
+
+            <!-- Videografer -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:gravity="center"
+                android:text="VIDEOGRAFER"
+                android:textColor="#FF1D1B20"
+                android:textStyle="bold"
+                android:fontFamily="Space Grotesk" />
+
+            <!-- Lainnya -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:gravity="center"
+                android:text="LAINNYA"
+                android:textColor="#FF1D1B20"
+                android:textStyle="bold"
+                android:fontFamily="Space Grotesk" />
+        </GridLayout>
+
+        <!-- Contact Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="INFORMASI KONTAK"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FF1D1B20"
+            android:fontFamily="Space Grotesk" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:hint="USERNAME KAMU"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:textColor="#FF1D1B20"
+            android:textColorHint="#FF494551"
+            android:fontFamily="Space Grotesk" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:hint="EMAIL KAMU"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:textColor="#FF1D1B20"
+            android:textColorHint="#FF494551"
+            android:fontFamily="Space Grotesk" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:hint="DISCORD KAMU"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:textColor="#FF1D1B20"
+            android:textColorHint="#FF494551"
+            android:fontFamily="Space Grotesk" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:hint="NOMOR WA KAMU"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:textColor="#FF1D1B20"
+            android:textColorHint="#FF494551"
+            android:fontFamily="Space Grotesk" />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#FF1D1B20"
+            android:text="LANJUT"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="Space Grotesk" />
+
+    </LinearLayout>
+</ScrollView>
