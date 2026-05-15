@@ -5,77 +5,83 @@
     android:layout_height="match_parent"
     android:background="@color/bg_light">
 
-    <!-- Filters -->
-    <LinearLayout
+    <!-- Filters Scrollable -->
+    <HorizontalScrollView
         android:id="@+id/filters"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:gravity="center_vertical"
         android:background="@color/white"
+        android:scrollbars="none"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Semua (Selected) -->
-        <TextView
-            android:id="@+id/filter_all"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:background="@drawable/bg_brutalist_selected"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="@string/semua"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:fontFamily="@font/space_grotesk_bold" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center_vertical">
 
-        <!-- Sukarela -->
-        <TextView
-            android:id="@+id/filter_sukarela"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="@string/sukarela"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:fontFamily="@font/space_grotesk_bold" />
+            <!-- Semua (Selected) -->
+            <TextView
+                android:id="@+id/filter_all"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_brutalist_selected"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center"
+                android:text="@string/semua"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/space_grotesk_bold" />
 
-        <!-- Berbayar -->
-        <TextView
-            android:id="@+id/filter_berbayar"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="@string/berbayar"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:fontFamily="@font/space_grotesk_bold" />
+            <!-- Sukarela -->
+            <TextView
+                android:id="@+id/filter_sukarela"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center"
+                android:text="@string/sukarela"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/space_grotesk_bold" />
 
-        <!-- Bagi Hasil -->
-        <TextView
-            android:id="@+id/filter_bagi_hasil"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="@string/bagi_hasil"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:fontFamily="@font/space_grotesk_bold" />
-    </LinearLayout>
+            <!-- Berbayar -->
+            <TextView
+                android:id="@+id/filter_berbayar"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center"
+                android:text="@string/berbayar"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/space_grotesk_bold" />
+
+            <!-- Bagi Hasil -->
+            <TextView
+                android:id="@+id/filter_bagi_hasil"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_brutalist_border"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center"
+                android:text="@string/bagi_hasil"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/space_grotesk_bold" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <View
         android:id="@+id/divider2"

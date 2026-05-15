@@ -20,8 +20,8 @@ public class AboutActivity extends AppCompatActivity {
         ImageView btnBack = findViewById(R.id.btn_back);
         btnBack.setOnClickListener(v -> finish());
 
-        findViewById(R.id.btn_ig_adrian).setOnClickListener(v -> openUrl("https://instagram.com/adrian"));
-        findViewById(R.id.btn_ig_kia).setOnClickListener(v -> openUrl("https://instagram.com/kia"));
+        findViewById(R.id.btn_ig_adrian).setOnClickListener(v -> openUrl("https://instagram.com/_ydhrs"));
+        findViewById(R.id.btn_ig_kia).setOnClickListener(v -> openUrl("https://instagram.com/kianieyo"));
         findViewById(R.id.btn_ig_pani).setOnClickListener(v -> openUrl("https://instagram.com/pani"));
     }
 

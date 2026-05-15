@@ -34,7 +34,7 @@ LAB</string>
     <string name="judul_proyek">JUDUL PROYEK</string>
     <string name="deskripsi_singkat_proyek_akan">Deskripsi singkat proyek akan muncul di sini.</string>
     <string name="str_0_pelamar">0 PELAMAR</string>
-    <string name="lihat">LIHAT -&gt;</string>
+    <string name="lihat">LIHAT</string>
     <string name="detail_projek">DETAIL PROJEK</string>
     <string name="sukarela">SUKARELA</string>
     <string name="crypto_analytics_dashboard_20">CRYPTO ANALYTICS DASHBOARD 2.0</string>
@@ -161,4 +161,5 @@ LAB</string>
     <string name="pesan_tambahan">PESAN TAMBAHAN</string>
     <string name="saya_sangat_tertarik_dengan_pr">Saya sangat tertarik dengan proyek ini...</string>
     <string name="batalkan_lamaran">BATALKAN LAMARAN</string>
+    <string name="tentang_aplikasi">TENTANG APLIKASI</string>
 </resources>

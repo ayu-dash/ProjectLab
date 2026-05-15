@@ -29,7 +29,6 @@
             android:layout_height="wrap_content"
             android:text="EDIT PROFIL"
             android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:fontFamily="@font/space_grotesk_bold"
             android:layout_marginStart="16dp" />
@@ -147,7 +146,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PORTOFOLIO (LINK)"
+                android:text="PORTOFOLIO"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -164,7 +163,7 @@
                 android:id="@+id/btn_tambah_link"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@drawable/bg_brutalist_border"
+                android:background="@drawable/bg_brutalist_yellow_shadow"
                 android:text="TAMBAH LINK"
                 android:gravity="center"
                 android:drawableStart="@drawable/ic_add"

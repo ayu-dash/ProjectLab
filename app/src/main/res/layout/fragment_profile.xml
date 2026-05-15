@@ -313,7 +313,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@drawable/bg_brutalist_yellow_shadow"
-                android:text="Tentang Aplikasi"
+                android:text="@string/tentang_aplikasi"
                 android:paddingHorizontal="20dp"
                 android:textSize="16sp"
                 android:textColor="@color/black"
