@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- Filled State -->
+    <LinearLayout
+        android:id="@+id/container_filled"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_brutalist_unselected"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_member_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:background="@color/purple_light" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:id="@+id/tv_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jordan_lee"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
+
+            <TextView
+                android:id="@+id/tv_member_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pm"
+                android:textSize="9sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/space_grotesk_regular" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_verified"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_check"
+            app:tint="@color/purple"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/container_empty"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_brutalist_dashed"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/bg_light"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_person_outline" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kosong"
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/space_grotesk_bold" />
+
+            <TextView
+                android:id="@+id/tv_empty_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frontend_dev"
+                android:textSize="9sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/space_grotesk_regular" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

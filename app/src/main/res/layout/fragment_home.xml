@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <!-- Filters -->
+    <LinearLayout
+        android:id="@+id/filters"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Semua (Selected) -->
+        <TextView
+            android:id="@+id/filter_all"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_brutalist_selected"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:text="@string/semua"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/space_grotesk_bold" />
+
+        <!-- Sukarela -->
+        <TextView
+            android:id="@+id/filter_sukarela"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:text="@string/sukarela"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/space_grotesk_bold" />
+
+        <!-- Berbayar -->
+        <TextView
+            android:id="@+id/filter_berbayar"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:text="@string/berbayar"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/space_grotesk_bold" />
+
+        <!-- Bagi Hasil -->
+        <TextView
+            android:id="@+id/filter_bagi_hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg_brutalist_border"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:text="@string/bagi_hasil"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/space_grotesk_bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/filters" />
+
+    <!-- Content (Dynamic List) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_projects"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- FAB -->
+    <FrameLayout
+        android:id="@+id/fab_create_project"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_brutalist_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/text_1"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

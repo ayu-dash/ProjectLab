@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Profile Info Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_brutalist_shadow"
+                android:padding="24dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="32dp">
+
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:layout_marginBottom="16dp">
+                    
+                    <ImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_person_solid"
+                        android:background="@color/purple_lighter"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/space_grotesk"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emailexamplecom"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_dark"
+                    android:fontFamily="@font/space_grotesk"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_role_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer"
+                    android:background="@drawable/bg_brutalist_selected"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/space_grotesk" />
+            </LinearLayout>
+
+            <!-- Stats Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp">
+                    
+                    <TextView
+                        android:id="@+id/tv_count_projects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/space_grotesk" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/proyek"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_dark"
+                        android:fontFamily="@font/space_grotesk" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp">
+                    
+                    <TextView
+                        android:id="@+id/tv_count_applications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/space_grotesk" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lamaran"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_dark"
+                        android:fontFamily="@font/space_grotesk" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Portfolio Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/portofolio"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_portfolio_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp">
+                <!-- Dynamic portfolio items will be added here -->
+                <TextView
+                    android:id="@+id/tv_portfolio_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:text="@string/belum_ada_portofolio"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_dark"
+                    android:fontFamily="@font/space_grotesk" />
+            </LinearLayout>
+
+            <!-- Contacts Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kontak"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp">
+
+                <!-- WhatsApp -->
+                <LinearLayout
+                    android:id="@+id/layout_whatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/whatsapp"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_dark"
+                        android:fontFamily="@font/space_grotesk" />
+                    <TextView
+                        android:id="@+id/tv_whatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/belum_diatur"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/space_grotesk" />
+                </LinearLayout>
+
+                <!-- Discord -->
+                <LinearLayout
+                    android:id="@+id/layout_discord"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/discord"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_dark"
+                        android:fontFamily="@font/space_grotesk" />
+                    <TextView
+                        android:id="@+id/tv_discord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/belum_diatur"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/space_grotesk" />
+                </LinearLayout>
+
+                <!-- Email Contact Item -->
+                <LinearLayout
+                    android:id="@+id/layout_email_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_brutalist_shadow"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_dark"
+                        android:fontFamily="@font/space_grotesk" />
+                    <TextView
+                        android:id="@+id/tv_email_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/belum_diatur"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/space_grotesk" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Settings Menu -->
+            <TextView
+                android:id="@+id/btn_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_brutalist_yellow_shadow"
+                android:text="@string/edit_profil"
+                android:paddingHorizontal="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:layout_marginBottom="12dp" />
+
+
+
+            <TextView
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_brutalist_red_shadow"
+                android:text="@string/logout"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/bg_light"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

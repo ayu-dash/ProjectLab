@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFDF7FF">
+    android:background="@color/bg_light">
 
     <!-- Top Bar -->
     <LinearLayout
@@ -14,312 +14,55 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:gravity="center_vertical"
-        android:background="#FFFFFFFF"
+        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="PROJECTLAB"
+            android:text="@string/projectlab"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#FF1D1B20"
-            android:fontFamily="Space Grotesk" />
+            android:letterSpacing="-0.010"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk_bold" />
 
         <ImageView
+            android:id="@+id/btn_search"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginRight="16dp"
-            android:src="@drawable/ic_icon" /> <!-- Placeholder for Search -->
+            android:src="@drawable/ic_search" />
 
         <ImageView
+            android:id="@+id/btn_notifications"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_icon" /> <!-- Placeholder for Notification -->
+            android:src="@drawable/ic_notifications" />
     </LinearLayout>
 
     <View
         android:id="@+id/divider1"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#FF1D1B20"
+        android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@id/top_bar" />
 
-    <!-- Filters -->
-    <LinearLayout
-        android:id="@+id/filters"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:gravity="center_vertical"
-        android:background="#FFFFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/divider1">
-
-        <!-- Semua (Selected) -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:background="@drawable/bg_brutalist_selected"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="SEMUA"
-            android:textColor="#FF1D1B20"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:fontFamily="Space Grotesk" />
-
-        <!-- Sukarela -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="SUKARELA"
-            android:textColor="#FF1D1B20"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:fontFamily="Space Grotesk" />
-
-        <!-- Berbayar -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center"
-            android:text="BERBAYAR"
-            android:textColor="#FF1D1B20"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:fontFamily="Space Grotesk" />
-    </LinearLayout>
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#FF1D1B20"
-        app:layout_constraintTop_toBottomOf="@id/filters" />
-
-    <!-- Content (Scrollable) -->
-    <ScrollView
+    <!-- Fragment Container -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/divider2"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav">
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        app:layout_constraintBottom_toTopOf="@id/divider_bottom" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <!-- Card 1 (Yellow) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/bg_brutalist_selected"
-                android:padding="16dp"
-                android:layout_marginBottom="16dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="[DEVELOPER, 3 ROLE LAINNYA]"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF1D1B20"
-                        android:fontFamily="Space Grotesk" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:background="#FF1D1B20"
-                        android:paddingLeft="8dp"
-                        android:paddingTop="2dp"
-                        android:paddingRight="8dp"
-                        android:paddingBottom="2dp"
-                        android:text="SUKARELA"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="REVOLUSI URBAN FARMING"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#FF1D1B20"
-                    android:fontFamily="Space Grotesk" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Platform manajemen kebun hidroponik berbasis"
-                    android:textSize="14sp"
-                    android:textColor="#FF1D1B20"
-                    android:fontFamily="Space Grotesk" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#FF1D1B20"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="12 PELAMAR"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF1D1B20"
-                        android:fontFamily="Space Grotesk" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:text="LIHAT ->"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF1D1B20"
-                        android:fontFamily="Space Grotesk" />
-                </RelativeLayout>
-            </LinearLayout>
-
-            <!-- Card 2 (White) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/bg_brutalist_border"
-                android:padding="16dp"
-                android:layout_marginBottom="16dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="[UI/UX DESIGNER]"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF1D1B20"
-                        android:fontFamily="Space Grotesk" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:background="#FF1D1B20"
-                        android:paddingLeft="8dp"
-                        android:paddingTop="2dp"
-                        android:paddingRight="8dp"
-                        android:paddingBottom="2dp"
-                        android:text="BERBAYAR"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="REDESIGN PORTAL DESA"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#FF1D1B20"
-                    android:fontFamily="Space Grotesk" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Memperbarui antarmuka layanan publik digital"
-                    android:textSize="14sp"
-                    android:textColor="#FF1D1B20"
-                    android:fontFamily="Space Grotesk" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#FF1D1B20"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5 PELAMAR"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF1D1B20"
-                        android:fontFamily="Space Grotesk" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:text="LIHAT ->"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF1D1B20"
-                        android:fontFamily="Space Grotesk" />
-                </RelativeLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- FAB -->
-    <LinearLayout
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_margin="16dp"
-        android:background="@drawable/bg_brutalist_selected"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="32sp"
-            android:textColor="#FF1D1B20"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <!-- Bottom Nav Divider -->
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav" />
 
     <!-- Bottom Nav -->
     <LinearLayout
@@ -327,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:background="#FFFFFFFF"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <!-- Home -->
@@ -335,16 +78,18 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF1D1B20"
+            android:background="@color/black"
             android:gravity="center">
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_icon" /> <!-- Placeholder for Home -->
+                android:src="@drawable/ic_home_solid"
+                android:tint="@color/white" />
         </LinearLayout>
 
         <!-- Projects -->
         <LinearLayout
+            android:id="@+id/nav_projekku"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -352,10 +97,10 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_icon" /> <!-- Placeholder for Projects -->
+                android:src="@drawable/ic_work_outline" />
         </LinearLayout>
 
-        <!-- Briefcase -->
+        <!-- Briefcase (Now using description icon) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -364,7 +109,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_icon" /> <!-- Placeholder for Briefcase -->
+                android:src="@drawable/ic_description_outline" />
         </LinearLayout>
 
         <!-- Profile -->
@@ -376,7 +121,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_icon" /> <!-- Placeholder for Profile -->
+                android:src="@drawable/ic_person_outline" />
         </LinearLayout>
     </LinearLayout>
 

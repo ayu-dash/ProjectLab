@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_brutalist_unselected"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Row: Project Title & Status Tag -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/projek"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/space_grotesk" />
+
+            <TextView
+                android:id="@+id/tv_project_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/neobanking_app"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/space_grotesk"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/menunggu"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/space_grotesk" />
+    </LinearLayout>
+
+    <!-- Role Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/role"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/space_grotesk" />
+
+        <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/uiux_designer"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/space_grotesk"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_e0"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bottom Row: Date & Action -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_12_jan_2024"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk" />
+
+        <TextView
+            android:id="@+id/btn_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_detail"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- Contact Info (Visible if Accepted) -->
+    <LinearLayout
+        android:id="@+id/layout_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_contact_wa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp: -"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_contact_discord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discord: -"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk" />
+
+        <TextView
+            android:id="@+id/tv_contact_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email: -"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk" />
+    </LinearLayout>
+
+</LinearLayout>

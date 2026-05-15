@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFDF7FF"
+    android:background="@color/bg_light"
     android:fillViewport="true">
 
     <LinearLayout
@@ -22,11 +22,12 @@
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="KAMU INI SIAPA?"
+                android:text="@string/kamu_ini_siapa"
                 android:textSize="32sp"
-                android:textStyle="bold"
-                android:textColor="#FF1D1B20"
-                android:fontFamily="Space Grotesk" />
+                android:letterSpacing="-0.016"
+                android:lineHeight="32sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <TextView
                 android:id="@+id/tv_badge"
@@ -34,36 +35,36 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="#FF1D1B20"
+                android:background="@color/black"
                 android:paddingLeft="8dp"
                 android:paddingTop="4dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="4dp"
-                android:text="1 / 2"
-                android:textColor="#FFFFFFFF"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:text="@string/str_1_2"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
         </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Isi sekali. Dipakai selamanya."
+            android:text="@string/isi_sekali_dipakai_selamanya"
             android:textSize="16sp"
-            android:textColor="#FF494551"
-            android:fontFamily="Space Grotesk" />
+            android:lineHeight="24sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/space_grotesk_medium" />
 
         <!-- Role Selection -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="ROLE UTAMAMU"
+            android:text="@string/role_utamamu"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="#FF1D1B20"
-            android:fontFamily="Space Grotesk" />
+            android:letterSpacing="0.012"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk_bold" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -75,81 +76,81 @@
 
             <!-- Developer -->
             <TextView
+                android:id="@+id/tv_role_developer"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:background="@drawable/bg_brutalist_border"
+                android:background="@drawable/bg_brutalist_shadow"
                 android:gravity="center"
-                android:text="DEVELOPER"
-                android:textColor="#FF1D1B20"
-                android:textStyle="bold"
-                android:fontFamily="Space Grotesk" />
+                android:text="@string/developer"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <!-- Desainer -->
             <TextView
+                android:id="@+id/tv_role_desainer"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
                 android:background="@drawable/bg_brutalist_selected"
                 android:gravity="center"
-                android:text="DESAINER"
-                android:textColor="#FF1D1B20"
-                android:textStyle="bold"
-                android:fontFamily="Space Grotesk" />
+                android:text="@string/desainer"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <!-- Writer -->
             <TextView
+                android:id="@+id/tv_role_writer"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:background="@drawable/bg_brutalist_border"
+                android:background="@drawable/bg_brutalist_shadow"
                 android:gravity="center"
-                android:text="WRITER"
-                android:textColor="#FF1D1B20"
-                android:textStyle="bold"
-                android:fontFamily="Space Grotesk" />
+                android:text="@string/writer"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <!-- Marketer -->
             <TextView
+                android:id="@+id/tv_role_marketer"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:background="@drawable/bg_brutalist_border"
+                android:background="@drawable/bg_brutalist_shadow"
                 android:gravity="center"
-                android:text="MARKETER"
-                android:textColor="#FF1D1B20"
-                android:textStyle="bold"
-                android:fontFamily="Space Grotesk" />
+                android:text="@string/marketer"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <!-- Videografer -->
             <TextView
+                android:id="@+id/tv_role_videografer"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:background="@drawable/bg_brutalist_border"
+                android:background="@drawable/bg_brutalist_shadow"
                 android:gravity="center"
-                android:text="VIDEOGRAFER"
-                android:textColor="#FF1D1B20"
-                android:textStyle="bold"
-                android:fontFamily="Space Grotesk" />
+                android:text="@string/videografer"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
 
             <!-- Lainnya -->
             <TextView
+                android:id="@+id/tv_role_lainnya"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                android:background="@drawable/bg_brutalist_border"
+                android:background="@drawable/bg_brutalist_shadow"
                 android:gravity="center"
-                android:text="LAINNYA"
-                android:textColor="#FF1D1B20"
-                android:textStyle="bold"
-                android:fontFamily="Space Grotesk" />
+                android:text="@string/lainnya"
+                android:textColor="@color/black"
+                android:fontFamily="@font/space_grotesk_bold" />
         </GridLayout>
 
         <!-- Contact Info -->
@@ -157,63 +158,75 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="INFORMASI KONTAK"
+            android:text="@string/informasi_kontak"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="#FF1D1B20"
-            android:fontFamily="Space Grotesk" />
+            android:letterSpacing="0.012"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk_bold" />
 
         <EditText
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:hint="USERNAME KAMU"
+            android:background="@drawable/bg_brutalist_shadow"
+            android:hint="@string/username_kamu"
+            android:inputType="text"
+            android:autofillHints="name"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:textSize="14sp"
-            android:textColor="#FF1D1B20"
-            android:textColorHint="#FF494551"
-            android:fontFamily="Space Grotesk" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/space_grotesk_regular" />
 
         <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:hint="EMAIL KAMU"
+            android:background="@drawable/bg_brutalist_shadow"
+            android:hint="@string/email_kamu"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:textSize="14sp"
-            android:textColor="#FF1D1B20"
-            android:textColorHint="#FF494551"
-            android:fontFamily="Space Grotesk" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/space_grotesk_regular" />
 
         <EditText
+            android:id="@+id/et_discord"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:hint="DISCORD KAMU"
+            android:background="@drawable/bg_brutalist_shadow"
+            android:hint="@string/discord_kamu"
+            android:inputType="text"
+            android:autofillHints="name"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:textSize="14sp"
-            android:textColor="#FF1D1B20"
-            android:textColorHint="#FF494551"
-            android:fontFamily="Space Grotesk" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/space_grotesk_regular" />
 
         <EditText
+            android:id="@+id/et_wa"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/bg_brutalist_border"
-            android:hint="NOMOR WA KAMU"
+            android:background="@drawable/bg_brutalist_shadow"
+            android:hint="@string/nomor_wa_kamu"
+            android:inputType="phone"
+            android:autofillHints="phone"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:textSize="14sp"
-            android:textColor="#FF1D1B20"
-            android:textColorHint="#FF494551"
-            android:fontFamily="Space Grotesk" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/space_grotesk_regular" />
 
         <!-- Next Button -->
         <Button
@@ -222,12 +235,12 @@
             android:layout_height="60dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#FF1D1B20"
-            android:text="LANJUT"
-            android:textColor="#FFFFFFFF"
+            android:backgroundTint="@color/black"
+            app:cornerRadius="0dp"
+            android:text="@string/lanjut"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:fontFamily="Space Grotesk" />
+            android:fontFamily="@font/space_grotesk_bold" />
 
     </LinearLayout>
 </ScrollView>

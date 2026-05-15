@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/bg_light">
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="4dp"
+        android:background="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terima_pelamar"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/space_grotesk_bold"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_brutalist_selected"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_description_outline" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="@string/kontak_kamu_akan_dikirim_ke_pe"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/space_grotesk" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_ya_terima"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/black"
+        android:text="@string/ya_terima"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/bg_light"
+        android:fontFamily="@font/space_grotesk_bold"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/btn_batalkan"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_brutalist_unselected"
+        android:text="@string/batalkan"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/space_grotesk_bold" />
+
+</LinearLayout>

@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#FF1D1B20</color>
+    <color name="black_10">#1A1D1B20</color>
+    <color name="black_05">#0D1D1B20</color>
+    <color name="black_20">#331D1B20</color>
+    <color name="black_26">#44000000</color>
+
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_80">#80FFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+
+    <color name="yellow">#FFE500</color>
+    <color name="yellow_33">#33FFE500</color>
+
+    <color name="red">#FFEA4335</color>
+    <color name="red_light">#FFFF4C4C</color>
+    <color name="red_dark">#FFBA1A1A</color>
+
+    <color name="green">#FF34A853</color>
+    <color name="green_light">#3DDC84</color>
+
+    <color name="blue">#FF4285F4</color>
+
+    <color name="gray">#FF494551</color>
+    <color name="gray_05">#08494551</color>
+    <color name="gray_light">#FFB9B5C0</color>
+    <color name="gray_lighter">#FFCBC4D2</color>
+    <color name="gray_dark">#FF6B7280</color>
+    <color name="gray_e0">#FFE0E0E0</color>
+
+    <color name="bg_light">#FFFDF7FF</color>
+    <color name="bg_light_80">#CCFDF7FF</color>
+    <color name="bg_light_alt">#FFF5F5F0</color>
+
+    <color name="purple">#6750A4</color>
+    <color name="purple_dark">#FF6200EE</color>
+    <color name="purple_light">#E1D4FD</color>
+    <color name="purple_lighter">#FFEADDFF</color>
 </resources>

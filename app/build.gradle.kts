@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "id.adrianyudhaswara.projectlab"
+    namespace = "id.project.lab"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "id.adrianyudhaswara.projectlab"
+        applicationId = "id.project.lab"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -43,7 +43,10 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation("com.google.firebase:firebase-storage")
     implementation(libs.play.services.auth)
+    implementation(libs.glide)
+    annotationProcessor(libs.glide.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
