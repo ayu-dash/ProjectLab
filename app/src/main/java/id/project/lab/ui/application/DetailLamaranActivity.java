@@ -169,15 +169,53 @@ public class DetailLamaranActivity extends AppCompatActivity {
                     
                     String discord = userDoc.getString("discord");
                     String email = userDoc.getString("email");
+
+                    if (wa != null && !wa.isEmpty()) {
+                        tvContactWA.setText("WhatsApp: " + wa);
+                        String finalWa = wa;
+                        tvContactWA.setOnClickListener(v -> {
+                            String url = "https://wa.me/" + finalWa.replace("+", "").replace(" ", "").replace("-", "");
+                            android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url));
+                            startActivity(intent);
+                        });
+                    } else {
+                        tvContactWA.setText("WhatsApp: -");
+                    }
                     
-                    if (wa != null && !wa.isEmpty()) tvContactWA.setText("WhatsApp: " + wa);
-                    else tvContactWA.setText("WhatsApp: -");
+                    if (discord != null && !discord.isEmpty()) {
+                        tvContactDiscord.setText("Discord: " + discord);
+                        String finalDiscord = discord;
+                        tvContactDiscord.setOnClickListener(v -> {
+                            String url = finalDiscord.trim();
+                            if (!url.startsWith("http")) {
+                                if (url.contains("discord.gg") || url.contains("discord.com")) {
+                                    url = "https://" + url;
+                                } else {
+                                    url = "https://discord.com/search?q=" + url;
+                                }
+                            }
+                            try {
+                                android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url));
+                                startActivity(intent);
+                            } catch (Exception e) {
+                                Toast.makeText(this, "Gagal membuka Discord", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    } else {
+                        tvContactDiscord.setText("Discord: -");
+                    }
                     
-                    if (discord != null && !discord.isEmpty()) tvContactDiscord.setText("Discord: " + discord);
-                    else tvContactDiscord.setText("Discord: -");
-                    
-                    if (email != null && !email.isEmpty()) tvContactEmail.setText("Email: " + email);
-                    else tvContactEmail.setText("Email: -");
+                    if (email != null && !email.isEmpty()) {
+                        tvContactEmail.setText("Email: " + email);
+                        String finalEmail = email;
+                        tvContactEmail.setOnClickListener(v -> {
+                            android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_SENDTO);
+                            intent.setData(android.net.Uri.parse("mailto:" + finalEmail));
+                            startActivity(intent);
+                        });
+                    } else {
+                        tvContactEmail.setText("Email: -");
+                    }
                 });
             }
         });

@@ -137,7 +137,9 @@
             android:textSize="12sp"
             android:textColor="@color/black"
             android:fontFamily="@font/space_grotesk"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_open_in_new"
+            android:drawablePadding="8dp" />
 
         <TextView
             android:id="@+id/tv_contact_discord"
@@ -146,7 +148,9 @@
             android:text="Discord: -"
             android:textSize="12sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/space_grotesk" />
+            android:fontFamily="@font/space_grotesk"
+            android:drawableStart="@drawable/ic_open_in_new"
+            android:drawablePadding="8dp" />
 
         <TextView
             android:id="@+id/tv_contact_email"
@@ -155,7 +159,9 @@
             android:text="Email: -"
             android:textSize="12sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/space_grotesk" />
+            android:fontFamily="@font/space_grotesk"
+            android:drawableStart="@drawable/ic_open_in_new"
+            android:drawablePadding="8dp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -200,29 +200,36 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="WhatsApp: -"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/space_grotesk_bold"
-                        android:layout_marginBottom="8dp" />
+                        android:fontFamily="@font/space_grotesk"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/ic_open_in_new"
+                        android:drawablePadding="8dp" />
 
                     <TextView
                         android:id="@+id/tv_contact_discord"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Discord: -"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/space_grotesk_bold"
-                        android:layout_marginBottom="8dp" />
+                        android:fontFamily="@font/space_grotesk"
+                        android:layout_marginTop="4dp"
+                        android:drawableStart="@drawable/ic_open_in_new"
+                        android:drawablePadding="8dp" />
 
                     <TextView
                         android:id="@+id/tv_contact_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Email: -"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/space_grotesk_bold" />
+                        android:fontFamily="@font/space_grotesk"
+                        android:layout_marginTop="4dp"
+                        android:drawableStart="@drawable/ic_open_in_new"
+                        android:drawablePadding="8dp" />
                 </LinearLayout>
             </LinearLayout>
 

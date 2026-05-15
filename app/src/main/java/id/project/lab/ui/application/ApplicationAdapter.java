@@ -114,6 +114,49 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
                     holder.tvContactWA.setText("WhatsApp: " + (wa != null && !wa.isEmpty() ? wa : "-"));
                     holder.tvContactDiscord.setText("Discord: " + (discord != null && !discord.isEmpty() ? discord : "-"));
                     holder.tvContactEmail.setText("Email: " + (email != null && !email.isEmpty() ? email : "-"));
+
+                    if (wa != null && !wa.isEmpty()) {
+                        String finalWa = wa;
+                        holder.tvContactWA.setOnClickListener(v -> {
+                            String url = "https://wa.me/" + finalWa.replace("+", "").replace(" ", "").replace("-", "");
+                            android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url));
+                            v.getContext().startActivity(intent);
+                        });
+                    }
+
+                    if (discord != null && !discord.isEmpty()) {
+                        String finalDiscord = discord;
+                        holder.tvContactDiscord.setOnClickListener(v -> {
+                            String url = finalDiscord.trim();
+                            if (!url.startsWith("http")) {
+                                // If it's just a username, we can't easily link to PM, 
+                                // but we'll try to treat it as a search or just open discord.com
+                                if (url.contains("discord.gg") || url.contains("discord.com")) {
+                                    url = "https://" + url;
+                                } else {
+                                    // Fallback to searching the user or just opening discord
+                                    url = "https://discord.com/search?q=" + url;
+                                }
+                            }
+                            try {
+                                android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url));
+                                // Force browser to avoid app interception if desired, 
+                                // but ACTION_VIEW is usually what users want
+                                v.getContext().startActivity(intent);
+                            } catch (Exception e) {
+                                android.widget.Toast.makeText(v.getContext(), "Gagal membuka Discord", android.widget.Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+
+                    if (email != null && !email.isEmpty()) {
+                        String finalEmail = email;
+                        holder.tvContactEmail.setOnClickListener(v -> {
+                            android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_SENDTO);
+                            intent.setData(android.net.Uri.parse("mailto:" + finalEmail));
+                            v.getContext().startActivity(intent);
+                        });
+                    }
                 });
             }
         });
