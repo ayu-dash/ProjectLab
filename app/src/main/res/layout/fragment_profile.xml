@@ -309,6 +309,19 @@
 
 
             <TextView
+                android:id="@+id/btn_about"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_brutalist_yellow_shadow"
+                android:text="Tentang Aplikasi"
+                android:paddingHorizontal="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
                 android:id="@+id/btn_logout"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"

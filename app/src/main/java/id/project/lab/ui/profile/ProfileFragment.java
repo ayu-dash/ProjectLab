@@ -66,6 +66,11 @@ public class ProfileFragment extends Fragment {
             startActivity(intent);
         });
 
+        view.findViewById(R.id.btn_about).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), id.project.lab.ui.application.AboutActivity.class);
+            startActivity(intent);
+        });
+
         view.findViewById(R.id.btn_logout).setOnClickListener(v -> {
             mAuth.signOut();
             Intent intent = new Intent(getActivity(), LoginActivity.class);

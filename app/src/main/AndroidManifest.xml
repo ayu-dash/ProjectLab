@@ -61,6 +61,9 @@
         <activity
             android:name=".ui.notification.NotificationActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.application.AboutActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
