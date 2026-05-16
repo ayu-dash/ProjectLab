@@ -12,7 +12,7 @@ LAB</string>
     <string name="masuk_dengan_google">MASUK DENGAN GOOGLE</string>
     <string name="masuk_dengan_github">MASUK DENGAN GITHUB</string>
     <string name="dengan_masuk_kamu_setuju_denga">Dengan masuk, kamu setuju dengan syarat layanan ProjectLab.</string>
-    <string name="project_lab_core_infrastructur">PROJECT LAB // CORE INFRASTRUCTURE</string>
+    <string name="project_lab_core_infrastructur">Copyright © 2026 ProjectLab</string>
     <string name="kamu_ini_siapa">KAMU INI SIAPA?</string>
     <string name="str_1_2">1 / 2</string>
     <string name="isi_sekali_dipakai_selamanya">Isi sekali. Dipakai selamanya.</string>
@@ -162,4 +162,5 @@ LAB</string>
     <string name="saya_sangat_tertarik_dengan_pr">Saya sangat tertarik dengan proyek ini...</string>
     <string name="batalkan_lamaran">BATALKAN LAMARAN</string>
     <string name="tentang_aplikasi">TENTANG APLIKASI</string>
+    <string name="content_tentang_aplikasi">Platform kolaborasi kreator digital untuk membentuk tim impian dan mengubah ide kreatif menjadi projek nyata.</string>
 </resources>

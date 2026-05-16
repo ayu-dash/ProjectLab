@@ -1,5 +1,6 @@
 package id.project.lab.ui.application;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -144,16 +145,16 @@ public class DetailLamaranActivity extends AppCompatActivity {
     private void updateStatusUI(String status) {
         if ("ACCEPTED".equals(status)) {
             tvStatus.setText("DITERIMA");
-            tvStatus.setBackgroundResource(R.drawable.bg_brutalist_selected); // Green/Selected color
+            tvStatus.setBackgroundResource(R.drawable.bg_brutalist_yellow_shadow);
             layoutContactInfo.setVisibility(View.VISIBLE);
             loadOwnerContact();
         } else if ("REJECTED".equals(status)) {
             tvStatus.setText("DITOLAK");
-            tvStatus.setBackgroundResource(R.drawable.bg_brutalist_red_shadow); // Red
+            tvStatus.setBackgroundResource(R.drawable.bg_brutalist_yellow_shadow);
             layoutContactInfo.setVisibility(View.GONE);
         } else {
             tvStatus.setText("MENUNGGU");
-            tvStatus.setBackgroundResource(R.drawable.bg_brutalist_yellow_shadow); // Yellow
+            tvStatus.setBackgroundResource(R.drawable.bg_brutalist_yellow_shadow);
             layoutContactInfo.setVisibility(View.GONE);
         }
     }
@@ -184,21 +185,24 @@ public class DetailLamaranActivity extends AppCompatActivity {
                     
                     if (discord != null && !discord.isEmpty()) {
                         tvContactDiscord.setText("Discord: " + discord);
-                        String finalDiscord = discord;
                         tvContactDiscord.setOnClickListener(v -> {
-                            String url = finalDiscord.trim();
-                            if (!url.startsWith("http")) {
-                                if (url.contains("discord.gg") || url.contains("discord.com")) {
-                                    url = "https://" + url;
-                                } else {
-                                    url = "https://discord.com/search?q=" + url;
-                                }
-                            }
-                            try {
-                                android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url));
-                                startActivity(intent);
-                            } catch (Exception e) {
-                                Toast.makeText(this, "Gagal membuka Discord", Toast.LENGTH_SHORT).show();
+                            Intent discordIntent = getPackageManager().getLaunchIntentForPackage("com.discord");
+                            if (discordIntent != null) {
+                                android.content.ClipboardManager clipboard = (android.content.ClipboardManager)
+                                        getSystemService(CLIPBOARD_SERVICE);
+                                android.content.ClipData clip = android.content.ClipData
+                                        .newPlainText("discord", discord);
+                                clipboard.setPrimaryClip(clip);
+
+                                Toast.makeText(this, "Username Discord disalin! Buka DM di Discord.", Toast.LENGTH_LONG).show();
+                                startActivity(discordIntent);
+                            } else {
+                                android.content.ClipboardManager clipboard = (android.content.ClipboardManager)
+                                        getSystemService(CLIPBOARD_SERVICE);
+                                android.content.ClipData clip = android.content.ClipData
+                                        .newPlainText("discord", discord);
+                                clipboard.setPrimaryClip(clip);
+                                Toast.makeText(this, "Username Discord disalin: " + discord, Toast.LENGTH_LONG).show();
                             }
                         });
                     } else {

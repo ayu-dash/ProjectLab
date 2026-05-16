@@ -103,7 +103,7 @@
                     android:id="@+id/iv_banner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/bg_brutalist_unselected"
+                    android:background="@drawable/bg_brutalist_dashed"
                     android:scaleType="centerCrop" />
 
                 <LinearLayout

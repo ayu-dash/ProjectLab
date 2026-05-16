@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.res.ResourcesCompat;
+import android.graphics.Typeface;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -54,6 +57,8 @@ public class SearchActivity extends AppCompatActivity {
         sectionRecent = findViewById(R.id.section_recent);
         sectionResults = findViewById(R.id.section_results);
         containerRecentItems = findViewById(R.id.container_recent_items);
+
+        applyFont(tvResultLabel);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         searchResults = new ArrayList<>();
@@ -122,6 +127,11 @@ public class SearchActivity extends AppCompatActivity {
             list.add(value);
             btn.setBackgroundResource(R.drawable.bg_brutalist_selected);
         }
+    }
+
+    private void applyFont(TextView tv) {
+        Typeface font = ResourcesCompat.getFont(this, R.font.space_grotesk_bold);
+        tv.setTypeface(font);
     }
 
     private void setupRecentSearches() {

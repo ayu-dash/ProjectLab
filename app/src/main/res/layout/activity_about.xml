@@ -113,7 +113,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ProjectLab adalah platform inovatif yang dirancang untuk mempertemukan para inovator, developer, desainer, dan kreatif lainnya. Kami percaya bahwa kolaborasi adalah kunci untuk menciptakan perubahan besar."
+                    android:text="@string/content_tentang_aplikasi"
                     android:textSize="14sp"
                     android:textColor="@color/black"
                     android:lineSpacingExtra="4dp"
@@ -151,7 +151,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Adrian Yudhaswara (@_ydhsr)"
+                        android:text="Adrian Yudhaswara (@yth._ydhsr)"
                         android:textSize="16sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/space_grotesk_medium" />
@@ -207,11 +207,10 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Pani"
+                        android:text="Silvani Putri Enrizal (@d4iryyy.m1lkkk_)"
                         android:textSize="16sp"
-                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/space_grotesk" />
+                        android:fontFamily="@font/space_grotesk_medium" />
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"

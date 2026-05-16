@@ -10,7 +10,7 @@
         android:id="@+id/filters"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white"
+        android:background="@color/bg_light"
         android:scrollbars="none"
         app:layout_constraintTop_toTopOf="parent">
 

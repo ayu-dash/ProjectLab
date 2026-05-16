@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_light">
+    android:background="@color/bg_light"
+    android:clipChildren="false"
+    android:clipToPadding="false" >
 
     <!-- Header Section (Yellow Block) -->
     <LinearLayout
         android:id="@+id/header_section"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="200dp"
         android:background="@color/yellow"
         android:orientation="vertical"
         android:padding="24dp"
@@ -43,25 +45,28 @@
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="4dp"
         android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@id/header_section" />
 
     <!-- Watermark "PL" in background -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pl"
-        android:textSize="300sp"
-        android:textStyle="bold"
+        android:textSize="350sp"
         android:textColor="@color/gray_05"
-        android:fontFamily="@font/space_grotesk"
+        android:fontFamily="@font/space_grotesk_bold"
+        android:rotation="-25"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintVertical_bias="0.3" />
+        android:translationX="10dp"
+        android:translationY="-100dp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintVertical_bias="1" />
 
     <!-- Login Card -->
     <LinearLayout

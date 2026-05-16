@@ -26,8 +26,8 @@
                 android:text="@string/projek"
                 android:textSize="12sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:fontFamily="@font/space_grotesk" />
+                android:alpha="0.6"
+                android:fontFamily="@font/space_grotesk_medium" />
 
             <TextView
                 android:id="@+id/tv_project_title"
@@ -36,8 +36,7 @@
                 android:text="@string/neobanking_app"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:fontFamily="@font/space_grotesk"
+                android:fontFamily="@font/space_grotesk_bold"
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 
@@ -70,8 +69,8 @@
             android:text="@string/role"
             android:textSize="12sp"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:fontFamily="@font/space_grotesk" />
+            android:alpha="0.6"
+            android:fontFamily="@font/space_grotesk_medium" />
 
         <TextView
             android:id="@+id/tv_role"
@@ -80,8 +79,7 @@
             android:text="@string/uiux_designer"
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:fontFamily="@font/space_grotesk"
+            android:fontFamily="@font/space_grotesk_bold"
             android:layout_marginTop="2dp" />
     </LinearLayout>
 
@@ -115,9 +113,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lihat_detail"
             android:textSize="12sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:fontFamily="@font/space_grotesk"
+            android:fontFamily="@font/space_grotesk_bold"
             android:padding="4dp" />
     </LinearLayout>
 

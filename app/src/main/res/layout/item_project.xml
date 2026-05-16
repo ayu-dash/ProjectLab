@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:text="@string/kategori"
             android:textSize="12sp"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
+            android:alpha="0.6"
             android:fontFamily="@font/space_grotesk_bold" />
 
         <TextView

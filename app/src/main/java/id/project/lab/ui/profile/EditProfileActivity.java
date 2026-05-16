@@ -97,7 +97,8 @@ public class EditProfileActivity extends AppCompatActivity {
         newLink.setTextSize(14f);
         newLink.setTextColor(android.graphics.Color.parseColor("#1D1B20"));
 
-        TextView deleteBtn = new TextView(this);
+//        TextView deleteBtn = new TextView(this);
+        ImageView deleteBtn = new ImageView(this);
         LinearLayout.LayoutParams deleteParams = new LinearLayout.LayoutParams(
                 (int) (60 * getResources().getDisplayMetrics().density),
                 (int) (60 * getResources().getDisplayMetrics().density)
@@ -105,18 +106,27 @@ public class EditProfileActivity extends AppCompatActivity {
         deleteParams.leftMargin = (int) (8 * getResources().getDisplayMetrics().density);
         deleteBtn.setLayoutParams(deleteParams);
         deleteBtn.setBackgroundResource(R.drawable.bg_brutalist_red_shadow);
-        deleteBtn.setText("X");
-        deleteBtn.setTextColor(android.graphics.Color.parseColor("#1D1B20"));
-        deleteBtn.setTextSize(18f);
-        deleteBtn.setGravity(Gravity.CENTER);
+        deleteBtn.setImageResource(R.drawable.ic_close);
+        deleteBtn.setColorFilter(android.graphics.Color.WHITE);
+        deleteBtn.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        deleteBtn.setPadding(
+                (int) (12 * getResources().getDisplayMetrics().density),
+                (int) (12 * getResources().getDisplayMetrics().density),
+                (int) (12 * getResources().getDisplayMetrics().density),
+                (int) (12 * getResources().getDisplayMetrics().density)
+        );
+//        deleteBtn.setText("X");
+//        deleteBtn.setTextColor(android.graphics.Color.parseColor("#1D1B20"));
+//        deleteBtn.setTextSize(18f);
+//        deleteBtn.setGravity(Gravity.CENTER);
 
         deleteBtn.setOnClickListener(v -> containerLinks.removeView(rowLayout));
 
-        try {
-            Typeface font = ResourcesCompat.getFont(this, R.font.space_grotesk);
-            newLink.setTypeface(font);
-            deleteBtn.setTypeface(font, Typeface.BOLD);
-        } catch (Exception e) {}
+//        try {
+//            Typeface font = ResourcesCompat.getFont(this, R.font.space_grotesk);
+//            newLink.setTypeface(font);
+//            deleteBtn.setTypeface(font, Typeface.BOLD);
+//        } catch (Exception e) {}
 
         rowLayout.addView(newLink);
         rowLayout.addView(deleteBtn);
